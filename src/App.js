@@ -15,9 +15,9 @@ function App() {
       <Background />
       <TextSection />
       <Canvas className="canvas">
-        {/* <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} /> */}
+        <directionalLight position={[-2, 5, 2]} />
         <Suspense fallback={null}>
           <Supra />
         </Suspense>
@@ -31,4 +31,9 @@ export default App;
 const Wrapper = styled.div`
   position: relative;
   background: #1f1144;
+
+  canvas {
+    width: 100%;
+    height: 100px;
+  }
 `;
